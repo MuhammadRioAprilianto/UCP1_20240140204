@@ -1,19 +1,14 @@
 :root {
-    --primary: #6366f1;
-    --bg-dark: #0f172a;
-    --glass: rgba(255, 255, 255, 0.05);
-    --text: #f8fafc;
+    --bg-color: #e5e5e5; /* Abu-abu terang sesuai referensi */
+    --accent-color: #f7a900; /* Kuning mustard/oranye */
+    --text-dark: #2d2d2d;
 }
 
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -76,4 +71,46 @@ fieldset {
     border: 1px solid var(--primary);
     border-radius: 10px;
     padding: 15px;
+}
+
+/* Hero Section */
+.badge-custom {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-bottom: -15px; /* Menumpuk sedikit dengan teks di bawahnya */
+    position: relative;
+    z-index: 2;
+}
+
+#hero h1 {
+    font-size: 8rem;
+    line-height: 0.8;
+    letter-spacing: -3px;
+    color: #333;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.1); /* Efek tebal sedikit retro */
+}
+
+/* Dekorasi Gambar Hero */
+.hero-image-container {
+    position: relative;
+}
+.hero-bg-accent {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-color: var(--accent-color);
+    top: 10%;
+    right: 0;
+    border-radius: 20px 0 0 20px;
+    z-index: 0;
+}
+.hero-img {
+    position: relative;
+    z-index: 1;
+    filter: grayscale(100%) contrast(120%); /* Efek hitam putih seperti di desain */
 }
